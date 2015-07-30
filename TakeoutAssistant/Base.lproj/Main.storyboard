@@ -13,10 +13,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RDO-aB-94p">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="qHH-8C-78L" style="IBUITableViewCellStyleDefault" id="RDO-aB-94p">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RDO-aB-94p" id="7tV-zE-IZJ">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qHH-8C-78L">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -25,7 +33,13 @@
                             <outlet property="delegate" destination="JHy-gj-Tcl" id="44v-UE-56C"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="RH5-v6-qEg"/>
+                    <navigationItem key="navigationItem" id="RH5-v6-qEg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rnc-XJ-aoP">
+                            <connections>
+                                <action selector="add:" destination="JHy-gj-Tcl" id="pwi-3r-9Ia"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4A-1d-2eM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

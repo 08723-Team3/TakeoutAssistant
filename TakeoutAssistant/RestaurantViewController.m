@@ -8,14 +8,47 @@
 
 #import "RestaurantViewController.h"
 #import <CoreData/CoreData.h>
+#import "Restaurant+Creater.h"
+#import "Dish+Creater.h"
 
 @interface RestaurantViewController ()
 @property (nonatomic, strong) UIManagedDocument *document;
+@property (nonatomic, strong) NSArray *restaurants; // of Restaurant
 @end
 
 @implementation RestaurantViewController
 
+- (IBAction)add:(UIBarButtonItem *)sender {
+    // create a new restaurant
+    Restaurant *restaurant = [Restaurant createWithContext:self.document.managedObjectContext];
+
+    restaurant.name = [NSString stringWithFormat:@"Little Asia_%c", 65 + arc4random() % 26];
+    restaurant.address = @"abcdefg";
+    restaurant.phone = @"123456";
+    
+    // add a dish
+    Dish *dish1 = [Dish createWithContext:self.document.managedObjectContext];
+    dish1.name = @"Beef";
+    dish1.price = @"12.5";
+    [restaurant addMenuObject:dish1];
+    
+    // IMPORTANT!! update the database
+    [self synchronize];
+}
+
 #pragma mark - Properties
+
+-(UIManagedDocument *)document{
+    if(!_document) _document = [self createDocument];
+    return _document;
+}
+
+-(NSArray *)restaurants{
+    if(!_restaurants) return @[];
+    return _restaurants;
+}
+
+#pragma mark - Core Data
 
 -(UIManagedDocument *)createDocument{
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -44,14 +77,10 @@
     return document;
 }
 
--(UIManagedDocument *)document{
-    if(!_document) _document = [self createDocument];
-    return _document;
-}
-
 -(void)documentIsReady{
     if (self.document.documentState == UIDocumentStateNormal) { // start using document
         NSLog(@"Core data document is ready!\n");
+        [self fetchRestaurantsAndUpdateUI];
     } else {
         if (self.document.documentState == UIDocumentStateClosed) {
             NSLog(@"Document is closed!\n");
@@ -65,90 +94,42 @@
     }
 }
 
-#pragma mark - Table View
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+-(void)fetchRestaurantsAndUpdateUI{
+    NSManagedObjectContext *context = self.document.managedObjectContext;
+    NSError *error;
+    self.restaurants = [context executeFetchRequest:[NSFetchRequest fetchRequestWithEntityName:@"Restaurant"]
+                                              error:&error];
+    [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)synchronize{
+    [self.document saveToURL:self.document.fileURL
+            forSaveOperation:UIDocumentSaveForOverwriting
+           completionHandler:^(BOOL success) {
+               if(success)NSLog(@"changes saved!\n");
+               else NSLog(@"changes saving failed!\n");
+           }];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.restaurants count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"
+                                                            forIndexPath:indexPath];
+    Restaurant *restaurant = [self.restaurants objectAtIndex:indexPath.row];
+    [cell.textLabel setText:restaurant.name];
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - Notification
 - (void)viewDidAppear:(BOOL)animated
@@ -158,8 +139,9 @@
     [center addObserver:self
                selector:@selector(contextChanged:)
                    name:NSManagedObjectContextDidSaveNotification
-                 object:self.document.managedObjectContext]; //don’tpassnilhere!
+                 object:self.document.managedObjectContext];
 }
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
@@ -169,8 +151,9 @@
     [super viewWillDisappear:animated];
 }
 
-- (void)contextChanged:(NSNotification *)notification{
-    
+- (void)contextChanged:(NSNotification *)notification
+{
+    [self fetchRestaurantsAndUpdateUI];
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		983AEA661B6AC5BB0063C498 /* Dish+Creater.m in Sources */ = {isa = PBXBuildFile; fileRef = 983AEA651B6AC5BB0063C498 /* Dish+Creater.m */; };
 		985718BC1B6A8E09001CA355 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718BB1B6A8E09001CA355 /* main.m */; };
 		985718BF1B6A8E09001CA355 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718BE1B6A8E09001CA355 /* AppDelegate.m */; };
 		985718C51B6A8E09001CA355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985718C31B6A8E09001CA355 /* Main.storyboard */; };
@@ -17,7 +18,7 @@
 		985718EB1B6A919D001CA355 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718EA1B6A919D001CA355 /* Restaurant.m */; };
 		985718EE1B6A919D001CA355 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718ED1B6A919D001CA355 /* Dish.m */; };
 		985718F41B6AA08F001CA355 /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718F31B6AA08F001CA355 /* RestaurantViewController.m */; };
-		985718FA1B6AA671001CA355 /* Restaurant+Accessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718F91B6AA671001CA355 /* Restaurant+Accessor.m */; };
+		985718FD1B6AB90A001CA355 /* Restaurant+Creater.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718FC1B6AB90A001CA355 /* Restaurant+Creater.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		983AEA641B6AC5BB0063C498 /* Dish+Creater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dish+Creater.h"; sourceTree = "<group>"; };
+		983AEA651B6AC5BB0063C498 /* Dish+Creater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Dish+Creater.m"; sourceTree = "<group>"; };
 		985718B61B6A8E09001CA355 /* TakeoutAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeoutAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985718BA1B6A8E09001CA355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		985718BB1B6A8E09001CA355 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,8 +52,8 @@
 		985718ED1B6A919D001CA355 /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dish.m; sourceTree = "<group>"; };
 		985718F21B6AA08F001CA355 /* RestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantViewController.h; sourceTree = "<group>"; };
 		985718F31B6AA08F001CA355 /* RestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantViewController.m; sourceTree = "<group>"; };
-		985718F81B6AA671001CA355 /* Restaurant+Accessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Restaurant+Accessor.h"; sourceTree = "<group>"; };
-		985718F91B6AA671001CA355 /* Restaurant+Accessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Restaurant+Accessor.m"; sourceTree = "<group>"; };
+		985718FB1B6AB90A001CA355 /* Restaurant+Creater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Restaurant+Creater.h"; sourceTree = "<group>"; };
+		985718FC1B6AB90A001CA355 /* Restaurant+Creater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Restaurant+Creater.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +137,10 @@
 		985718E21B6A9160001CA355 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				985718F81B6AA671001CA355 /* Restaurant+Accessor.h */,
-				985718F91B6AA671001CA355 /* Restaurant+Accessor.m */,
+				985718FB1B6AB90A001CA355 /* Restaurant+Creater.h */,
+				985718FC1B6AB90A001CA355 /* Restaurant+Creater.m */,
+				983AEA641B6AC5BB0063C498 /* Dish+Creater.h */,
+				983AEA651B6AC5BB0063C498 /* Dish+Creater.m */,
 				985718EC1B6A919D001CA355 /* Dish.h */,
 				985718ED1B6A919D001CA355 /* Dish.m */,
 				985718E91B6A919D001CA355 /* Restaurant.h */,
@@ -246,10 +251,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				985718E11B6A8F7D001CA355 /* MenuModel.xcdatamodeld in Sources */,
+				985718FD1B6AB90A001CA355 /* Restaurant+Creater.m in Sources */,
+				983AEA661B6AC5BB0063C498 /* Dish+Creater.m in Sources */,
 				985718EE1B6A919D001CA355 /* Dish.m in Sources */,
 				985718EB1B6A919D001CA355 /* Restaurant.m in Sources */,
 				985718BF1B6A8E09001CA355 /* AppDelegate.m in Sources */,
-				985718FA1B6AA671001CA355 /* Restaurant+Accessor.m in Sources */,
 				985718F41B6AA08F001CA355 /* RestaurantViewController.m in Sources */,
 				985718BC1B6A8E09001CA355 /* main.m in Sources */,
 			);
