@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		985718BC1B6A8E09001CA355 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718BB1B6A8E09001CA355 /* main.m */; };
 		985718BF1B6A8E09001CA355 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718BE1B6A8E09001CA355 /* AppDelegate.m */; };
-		985718C21B6A8E09001CA355 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718C11B6A8E09001CA355 /* ViewController.m */; };
 		985718C51B6A8E09001CA355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985718C31B6A8E09001CA355 /* Main.storyboard */; };
 		985718C71B6A8E09001CA355 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985718C61B6A8E09001CA355 /* Images.xcassets */; };
 		985718CA1B6A8E09001CA355 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 985718C81B6A8E09001CA355 /* LaunchScreen.xib */; };
 		985718D61B6A8E09001CA355 /* TakeoutAssistantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718D51B6A8E09001CA355 /* TakeoutAssistantTests.m */; };
+		985718E11B6A8F7D001CA355 /* MenuModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 985718DF1B6A8F7D001CA355 /* MenuModel.xcdatamodeld */; };
+		985718EB1B6A919D001CA355 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718EA1B6A919D001CA355 /* Restaurant.m */; };
+		985718EE1B6A919D001CA355 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718ED1B6A919D001CA355 /* Dish.m */; };
+		985718F41B6AA08F001CA355 /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718F31B6AA08F001CA355 /* RestaurantViewController.m */; };
+		985718FA1B6AA671001CA355 /* Restaurant+Accessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718F91B6AA671001CA355 /* Restaurant+Accessor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +36,21 @@
 		985718BB1B6A8E09001CA355 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		985718BD1B6A8E09001CA355 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		985718BE1B6A8E09001CA355 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		985718C01B6A8E09001CA355 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		985718C11B6A8E09001CA355 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		985718C41B6A8E09001CA355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		985718C61B6A8E09001CA355 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		985718C91B6A8E09001CA355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		985718CF1B6A8E09001CA355 /* TakeoutAssistantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeoutAssistantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		985718D41B6A8E09001CA355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		985718D51B6A8E09001CA355 /* TakeoutAssistantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakeoutAssistantTests.m; sourceTree = "<group>"; };
+		985718E01B6A8F7D001CA355 /* MenuModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MenuModel.xcdatamodel; sourceTree = "<group>"; };
+		985718E91B6A919D001CA355 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
+		985718EA1B6A919D001CA355 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
+		985718EC1B6A919D001CA355 /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dish.h; sourceTree = "<group>"; };
+		985718ED1B6A919D001CA355 /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dish.m; sourceTree = "<group>"; };
+		985718F21B6AA08F001CA355 /* RestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantViewController.h; sourceTree = "<group>"; };
+		985718F31B6AA08F001CA355 /* RestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantViewController.m; sourceTree = "<group>"; };
+		985718F81B6AA671001CA355 /* Restaurant+Accessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Restaurant+Accessor.h"; sourceTree = "<group>"; };
+		985718F91B6AA671001CA355 /* Restaurant+Accessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Restaurant+Accessor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +92,9 @@
 		985718B81B6A8E09001CA355 /* TakeoutAssistant */ = {
 			isa = PBXGroup;
 			children = (
-				985718BD1B6A8E09001CA355 /* AppDelegate.h */,
-				985718BE1B6A8E09001CA355 /* AppDelegate.m */,
-				985718C01B6A8E09001CA355 /* ViewController.h */,
-				985718C11B6A8E09001CA355 /* ViewController.m */,
+				985718E21B6A9160001CA355 /* Model */,
+				985718F21B6AA08F001CA355 /* RestaurantViewController.h */,
+				985718F31B6AA08F001CA355 /* RestaurantViewController.m */,
 				985718C31B6A8E09001CA355 /* Main.storyboard */,
 				985718C61B6A8E09001CA355 /* Images.xcassets */,
 				985718C81B6A8E09001CA355 /* LaunchScreen.xib */,
@@ -96,6 +106,8 @@
 		985718B91B6A8E09001CA355 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				985718BD1B6A8E09001CA355 /* AppDelegate.h */,
+				985718BE1B6A8E09001CA355 /* AppDelegate.m */,
 				985718BA1B6A8E09001CA355 /* Info.plist */,
 				985718BB1B6A8E09001CA355 /* main.m */,
 			);
@@ -117,6 +129,20 @@
 				985718D41B6A8E09001CA355 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		985718E21B6A9160001CA355 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				985718F81B6AA671001CA355 /* Restaurant+Accessor.h */,
+				985718F91B6AA671001CA355 /* Restaurant+Accessor.m */,
+				985718EC1B6A919D001CA355 /* Dish.h */,
+				985718ED1B6A919D001CA355 /* Dish.m */,
+				985718E91B6A919D001CA355 /* Restaurant.h */,
+				985718EA1B6A919D001CA355 /* Restaurant.m */,
+				985718DF1B6A8F7D001CA355 /* MenuModel.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +245,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				985718C21B6A8E09001CA355 /* ViewController.m in Sources */,
+				985718E11B6A8F7D001CA355 /* MenuModel.xcdatamodeld in Sources */,
+				985718EE1B6A919D001CA355 /* Dish.m in Sources */,
+				985718EB1B6A919D001CA355 /* Restaurant.m in Sources */,
 				985718BF1B6A8E09001CA355 /* AppDelegate.m in Sources */,
+				985718FA1B6AA671001CA355 /* Restaurant+Accessor.m in Sources */,
+				985718F41B6AA08F001CA355 /* RestaurantViewController.m in Sources */,
 				985718BC1B6A8E09001CA355 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +446,7 @@
 				985718DB1B6A8E09001CA355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		985718DC1B6A8E09001CA355 /* Build configuration list for PBXNativeTarget "TakeoutAssistantTests" */ = {
 			isa = XCConfigurationList;
@@ -424,8 +455,23 @@
 				985718DE1B6A8E09001CA355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		985718DF1B6A8F7D001CA355 /* MenuModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				985718E01B6A8F7D001CA355 /* MenuModel.xcdatamodel */,
+			);
+			currentVersion = 985718E01B6A8F7D001CA355 /* MenuModel.xcdatamodel */;
+			name = MenuModel.xcdatamodeld;
+			path = ../Model/MenuModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 985718AE1B6A8E09001CA355 /* Project object */;
 }
