@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F963B941B6C2F9500EBAAE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B931B6C2F9500EBAAE8 /* UIKit.framework */; };
+		3F963B961B6C2F9D00EBAAE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B951B6C2F9D00EBAAE8 /* CoreGraphics.framework */; };
+		3F963B981B6C2FA600EBAAE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B971B6C2FA600EBAAE8 /* Foundation.framework */; };
+		3F963B9A1B6C2FDE00EBAAE8 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B991B6C2FDE00EBAAE8 /* CoreImage.framework */; };
+		3F963B9C1B6C2FE500EBAAE8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B9B1B6C2FE500EBAAE8 /* libz.dylib */; };
+		3F963B9E1B6C2FEF00EBAAE8 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B9D1B6C2FEF00EBAAE8 /* libstdc++.6.0.9.dylib */; };
+		3F963BA01B6C322800EBAAE8 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 3F963B9F1B6C322800EBAAE8 /* tessdata */; };
 		983AEA661B6AC5BB0063C498 /* Dish+Creater.m in Sources */ = {isa = PBXBuildFile; fileRef = 983AEA651B6AC5BB0063C498 /* Dish+Creater.m */; };
 		985718BC1B6A8E09001CA355 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718BB1B6A8E09001CA355 /* main.m */; };
 		985718BF1B6A8E09001CA355 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718BE1B6A8E09001CA355 /* AppDelegate.m */; };
@@ -19,6 +26,7 @@
 		985718EE1B6A919D001CA355 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718ED1B6A919D001CA355 /* Dish.m */; };
 		985718F41B6AA08F001CA355 /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718F31B6AA08F001CA355 /* RestaurantViewController.m */; };
 		985718FD1B6AB90A001CA355 /* Restaurant+Creater.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718FC1B6AB90A001CA355 /* Restaurant+Creater.m */; };
+		BA1ACFCF46656E6CC8DC5E0A /* libPods-TakeoutAssistant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A23D9E0FD6486464EB4859C /* libPods-TakeoutAssistant.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F963B931B6C2F9500EBAAE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3F963B951B6C2F9D00EBAAE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3F963B971B6C2FA600EBAAE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3F963B991B6C2FDE00EBAAE8 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		3F963B9B1B6C2FE500EBAAE8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3F963B9D1B6C2FEF00EBAAE8 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		3F963B9F1B6C322800EBAAE8 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		4D5D5471631277FD50BA612E /* Pods-TakeoutAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeoutAssistant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TakeoutAssistant/Pods-TakeoutAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		983AEA641B6AC5BB0063C498 /* Dish+Creater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dish+Creater.h"; sourceTree = "<group>"; };
 		983AEA651B6AC5BB0063C498 /* Dish+Creater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Dish+Creater.m"; sourceTree = "<group>"; };
 		985718B61B6A8E09001CA355 /* TakeoutAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeoutAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +70,8 @@
 		985718F31B6AA08F001CA355 /* RestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantViewController.m; sourceTree = "<group>"; };
 		985718FB1B6AB90A001CA355 /* Restaurant+Creater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Restaurant+Creater.h"; sourceTree = "<group>"; };
 		985718FC1B6AB90A001CA355 /* Restaurant+Creater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Restaurant+Creater.m"; sourceTree = "<group>"; };
+		9A23D9E0FD6486464EB4859C /* libPods-TakeoutAssistant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TakeoutAssistant.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBFEF342C62CCE5103C63505 /* Pods-TakeoutAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeoutAssistant.release.xcconfig"; path = "Pods/Target Support Files/Pods-TakeoutAssistant/Pods-TakeoutAssistant.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +79,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F963B9E1B6C2FEF00EBAAE8 /* libstdc++.6.0.9.dylib in Frameworks */,
+				3F963B9C1B6C2FE500EBAAE8 /* libz.dylib in Frameworks */,
+				3F963B9A1B6C2FDE00EBAAE8 /* CoreImage.framework in Frameworks */,
+				3F963B981B6C2FA600EBAAE8 /* Foundation.framework in Frameworks */,
+				3F963B961B6C2F9D00EBAAE8 /* CoreGraphics.framework in Frameworks */,
+				3F963B941B6C2F9500EBAAE8 /* UIKit.framework in Frameworks */,
+				BA1ACFCF46656E6CC8DC5E0A /* libPods-TakeoutAssistant.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +99,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53EE4429897649FD374A72EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F963B9D1B6C2FEF00EBAAE8 /* libstdc++.6.0.9.dylib */,
+				3F963B9B1B6C2FE500EBAAE8 /* libz.dylib */,
+				3F963B991B6C2FDE00EBAAE8 /* CoreImage.framework */,
+				3F963B971B6C2FA600EBAAE8 /* Foundation.framework */,
+				3F963B951B6C2F9D00EBAAE8 /* CoreGraphics.framework */,
+				3F963B931B6C2F9500EBAAE8 /* UIKit.framework */,
+				9A23D9E0FD6486464EB4859C /* libPods-TakeoutAssistant.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		985718AD1B6A8E09001CA355 = {
 			isa = PBXGroup;
 			children = (
 				985718B81B6A8E09001CA355 /* TakeoutAssistant */,
 				985718D21B6A8E09001CA355 /* TakeoutAssistantTests */,
 				985718B71B6A8E09001CA355 /* Products */,
+				E767D1EE8260BDBE5CB7996E /* Pods */,
+				53EE4429897649FD374A72EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +178,7 @@
 		985718E21B6A9160001CA355 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F963B9F1B6C322800EBAAE8 /* tessdata */,
 				985718FB1B6AB90A001CA355 /* Restaurant+Creater.h */,
 				985718FC1B6AB90A001CA355 /* Restaurant+Creater.m */,
 				983AEA641B6AC5BB0063C498 /* Dish+Creater.h */,
@@ -150,6 +192,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E767D1EE8260BDBE5CB7996E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D5D5471631277FD50BA612E /* Pods-TakeoutAssistant.debug.xcconfig */,
+				FBFEF342C62CCE5103C63505 /* Pods-TakeoutAssistant.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 985718D91B6A8E09001CA355 /* Build configuration list for PBXNativeTarget "TakeoutAssistant" */;
 			buildPhases = (
+				76462EA49783D00C265A77F2 /* Check Pods Manifest.lock */,
 				985718B21B6A8E09001CA355 /* Sources */,
 				985718B31B6A8E09001CA355 /* Frameworks */,
 				985718B41B6A8E09001CA355 /* Resources */,
+				E213746CB928AC862DB86EDA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				985718C51B6A8E09001CA355 /* Main.storyboard in Resources */,
+				3F963BA01B6C322800EBAAE8 /* tessdata in Resources */,
 				985718CA1B6A8E09001CA355 /* LaunchScreen.xib in Resources */,
 				985718C71B6A8E09001CA355 /* Images.xcassets in Resources */,
 			);
@@ -244,6 +298,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76462EA49783D00C265A77F2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E213746CB928AC862DB86EDA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TakeoutAssistant/Pods-TakeoutAssistant-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		985718B21B6A8E09001CA355 /* Sources */ = {
@@ -381,6 +468,7 @@
 		};
 		985718DA1B6A8E09001CA355 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D5D5471631277FD50BA612E /* Pods-TakeoutAssistant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TakeoutAssistant/Info.plist;
@@ -391,6 +479,7 @@
 		};
 		985718DB1B6A8E09001CA355 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBFEF342C62CCE5103C63505 /* Pods-TakeoutAssistant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TakeoutAssistant/Info.plist;
