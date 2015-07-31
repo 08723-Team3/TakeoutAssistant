@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" id="RH5-v6-qEg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rnc-XJ-aoP">
                             <connections>
-                                <action selector="add:" destination="JHy-gj-Tcl" id="pwi-3r-9Ia"/>
+                                <action selector="openCamera:" destination="JHy-gj-Tcl" id="MTW-FE-do0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

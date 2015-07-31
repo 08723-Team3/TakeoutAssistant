@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <TesseractOCR/TesseractOCR.h>
 
-@interface RestaurantViewController : UITableViewController
-
+@interface RestaurantViewController : UITableViewController<G8TesseractDelegate,
+UIImagePickerControllerDelegate,
+UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+- (IBAction)openCamera:(id)sender;
 @end
