@@ -16,9 +16,9 @@
     NSString *accessToken = @"Bkk5g_dMo18B5e0kepfC7rqdtQC1Vmtw";
     NSString *tokenSecret= @"UkG5Ep-JEQwTm958KPD2-oP6HqM";
     
-    NSMutableDictionary *dict2 = [NSMutableDictionary dictionary];
-    [dict2 setObject:nil forKey:@"oauth_callback"];
-    NSURLRequest *request = [TDOAuth URLRequestForPath:@"/authorize"
+    NSMutableDictionary *dict2 = [[NSMutableDictionary alloc] init];
+    [dict2 setObject:@"123" forKey:@"oauth_callback"];
+    NSURLRequest *request = [TDOAuth URLRequestForPath:@"http://api.yelp.com/v2/phone_search?phone=+15555555555"
                                      GETParameters:dict2
                                             scheme:@"http"
                                               host:@"http://api.yelp.com/v2/phone_search?phone=+15555555555"
