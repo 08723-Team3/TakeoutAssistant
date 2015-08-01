@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "Restaurant+Creater.h"
 #import "Dish+Creater.h"
+#import "HttpClient.h"
 
 @interface RestaurantViewController ()
 @property (nonatomic, strong) UIManagedDocument *document;
@@ -24,6 +25,7 @@
 // Jing add
 - (void)viewDidLoad
 {
+    [HttpClient searchByPhone:@"4126220133"];
     [super viewDidLoad];
     
     // Create a queue to perform recognition operations
