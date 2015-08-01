@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TDOAuth.h"
+#import "YelpClient.h"
 
 @interface HttpClient : NSObject
 +(void) searchByPhone:(NSString*) num;

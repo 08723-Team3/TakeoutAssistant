@@ -8,6 +8,7 @@
 
 #import "HttpClient.h"
 
+
 @implementation HttpClient
 
 +(void) searchByPhone:(NSString*) num{
@@ -16,27 +17,16 @@
     NSString *accessToken = @"Bkk5g_dMo18B5e0kepfC7rqdtQC1Vmtw";
     NSString *tokenSecret= @"UkG5Ep-JEQwTm958KPD2-oP6HqM";
     
-    NSMutableDictionary *dict2 = [[NSMutableDictionary alloc] init];
-    [dict2 setObject:@"123" forKey:@"oauth_callback"];
-    NSURLRequest *request = [TDOAuth URLRequestForPath:@"http://api.yelp.com/v2/phone_search?phone=+15555555555"
-                                     GETParameters:dict2
-                                            scheme:@"http"
-                                              host:@"http://api.yelp.com/v2/phone_search?phone=+15555555555"
-                                       consumerKey:consumerKey
-                                    consumerSecret:consumerSecret
-                                       accessToken:accessToken
-                                           tokenSecret:tokenSecret];
-    NSURLResponse *response = nil;
-    NSError *error;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request
-                                                 returningResponse:&response
-                                                             error:&error];
     
     
-
-    NSArray *raw = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:&error];
-    NSLog(raw.description);
+    YelpClient *client= [[YelpClient alloc] initWithConsumerKey:consumerKey consumerSecret:consumerSecret accessToken:accessToken accessSecret:tokenSecret];
     
+    
+    [client searchWithTerm:@"Thai" success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"response: %@", response);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"error: %@", [error description]);
+    }];
     
     
 }

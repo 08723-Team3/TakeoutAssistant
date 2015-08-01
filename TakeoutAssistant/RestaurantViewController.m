@@ -310,8 +310,7 @@
     } else if (buttonIndex == 1) {
         self.mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
-    
-    [self presentModalViewController:self.mediaPicker animated:YES];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 
