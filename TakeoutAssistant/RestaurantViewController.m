@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIManagedDocument *document;
 @property (nonatomic, strong) NSArray *restaurants; // of Restaurant
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
+@property UIImagePickerController *mediaPicker;
 @end
 
 @implementation RestaurantViewController
@@ -261,7 +262,7 @@
 - (BOOL)shouldCancelImageRecognitionForTesseract:(G8Tesseract *)tesseract {
     return NO;  // return YES, if you need to cancel recognition prematurely
 }
-
+/*
 - (IBAction)openCamera:(id)sender
 {
     UIImagePickerController *imgPicker = [UIImagePickerController new];
@@ -273,6 +274,37 @@
         [self presentViewController:imgPicker animated:YES completion:nil];
     }
 }
+ */
+- (IBAction)openCamera:(id)sender
+{
+    self.mediaPicker = [[UIImagePickerController alloc] init];
+    [self.mediaPicker setDelegate:self];
+    self.mediaPicker.allowsEditing = YES;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                                 delegate:self
+                                                        cancelButtonTitle:@"Cancel"
+                                                   destructiveButtonTitle:nil
+                                                        otherButtonTitles:@"Take photo", @"Choose Existing", nil];
+        [actionSheet showInView:self.view];
+
+    } else {
+        self.mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentModalViewController:self.mediaPicker animated:YES];
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        self.mediaPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else if (buttonIndex == 1) {
+        self.mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    [self presentModalViewController:self.mediaPicker animated:YES];
+}
+
 
 - (IBAction)recognizeSampleImage:(id)sender {
     [self recognizeImageWithTesseract:[UIImage imageNamed:@"image_sample.jpg"]];
