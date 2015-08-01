@@ -11,6 +11,7 @@
 #import "Restaurant+Creater.h"
 #import "Dish+Creater.h"
 #import "HttpClient.h"
+#import "RestaurantDetailViewController.h"
 
 @interface RestaurantViewController ()
 @property (nonatomic, strong) UIManagedDocument *document;
@@ -333,4 +334,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     [self recognizeImageWithTesseract:image];
 }
 
+- (IBAction)temp:(id)sender {
+    RestaurantDetailViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"detailStoryId"];
+    [self.navigationController pushViewController:view animated:YES];
+}
 @end

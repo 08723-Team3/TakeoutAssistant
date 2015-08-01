@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F10A9D11B6D3DD500829333 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F10A9D01B6D3DD500829333 /* background.png */; };
+		3F10A9D71B6D46A100829333 /* RestaurantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F10A9D61B6D46A100829333 /* RestaurantDetailViewController.m */; };
+		3F10A9D91B6D513C00829333 /* shareToT.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F10A9D81B6D513C00829333 /* shareToT.png */; };
+		3F10A9E11B6D56A600829333 /* tel_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F10A9E01B6D56A600829333 /* tel_icon.png */; };
+		3F10A9E31B6D56F000829333 /* yelp.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F10A9E21B6D56F000829333 /* yelp.png */; };
+		3F10A9E71B6D581D00829333 /* Restaurant_thumbstail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F10A9E61B6D581D00829333 /* Restaurant_thumbstail.png */; };
 		3F963B941B6C2F9500EBAAE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B931B6C2F9500EBAAE8 /* UIKit.framework */; };
 		3F963B961B6C2F9D00EBAAE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B951B6C2F9D00EBAAE8 /* CoreGraphics.framework */; };
 		3F963B981B6C2FA600EBAAE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B971B6C2FA600EBAAE8 /* Foundation.framework */; };
@@ -111,6 +117,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F10A9D01B6D3DD500829333 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		3F10A9D51B6D46A000829333 /* RestaurantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantDetailViewController.h; sourceTree = "<group>"; };
+		3F10A9D61B6D46A100829333 /* RestaurantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantDetailViewController.m; sourceTree = "<group>"; };
+		3F10A9D81B6D513C00829333 /* shareToT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareToT.png; sourceTree = "<group>"; };
+		3F10A9E01B6D56A600829333 /* tel_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tel_icon.png; sourceTree = "<group>"; };
+		3F10A9E21B6D56F000829333 /* yelp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yelp.png; sourceTree = "<group>"; };
+		3F10A9E61B6D581D00829333 /* Restaurant_thumbstail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Restaurant_thumbstail.png; sourceTree = "<group>"; };
 		3F963B931B6C2F9500EBAAE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3F963B951B6C2F9D00EBAAE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3F963B971B6C2FA600EBAAE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -980,6 +993,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F10A9CF1B6D3D8000829333 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3F10A9E61B6D581D00829333 /* Restaurant_thumbstail.png */,
+				3F10A9D81B6D513C00829333 /* shareToT.png */,
+				3F10A9E21B6D56F000829333 /* yelp.png */,
+				3F10A9E01B6D56A600829333 /* tel_icon.png */,
+				3F10A9D01B6D3DD500829333 /* background.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		53EE4429897649FD374A72EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2000,6 +2025,7 @@
 		985718AD1B6A8E09001CA355 = {
 			isa = PBXGroup;
 			children = (
+				3F10A9CF1B6D3D8000829333 /* Images */,
 				985718B81B6A8E09001CA355 /* TakeoutAssistant */,
 				985718D21B6A8E09001CA355 /* TakeoutAssistantTests */,
 				985718B71B6A8E09001CA355 /* Products */,
@@ -2021,8 +2047,6 @@
 			isa = PBXGroup;
 			children = (
 				985718E21B6A9160001CA355 /* Model */,
-				985718F21B6AA08F001CA355 /* RestaurantViewController.h */,
-				985718F31B6AA08F001CA355 /* RestaurantViewController.m */,
 				985718C31B6A8E09001CA355 /* Main.storyboard */,
 				985718C61B6A8E09001CA355 /* Images.xcassets */,
 				985718C81B6A8E09001CA355 /* LaunchScreen.xib */,
@@ -2034,6 +2058,10 @@
 		985718B91B6A8E09001CA355 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F10A9D51B6D46A000829333 /* RestaurantDetailViewController.h */,
+				3F10A9D61B6D46A100829333 /* RestaurantDetailViewController.m */,
+				985718F21B6AA08F001CA355 /* RestaurantViewController.h */,
+				985718F31B6AA08F001CA355 /* RestaurantViewController.m */,
 				985718BD1B6A8E09001CA355 /* AppDelegate.h */,
 				985718BE1B6A8E09001CA355 /* AppDelegate.m */,
 				985718BA1B6A8E09001CA355 /* Info.plist */,
