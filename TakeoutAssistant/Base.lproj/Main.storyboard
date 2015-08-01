@@ -41,6 +41,9 @@
                             <state key="normal" title="Temp">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="temp:" destination="JHy-gj-Tcl" eventType="touchUpInside" id="u9z-G9-oCK"/>
+                            </connections>
                         </button>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rnc-XJ-aoP">
                             <connections>
@@ -53,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="1438" y="65"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant Detail View Controller-->
         <scene sceneID="7Lj-gj-ymV">
             <objects>
-                <viewController id="bqM-qz-eEP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailStoryId" id="bqM-qz-eEP" customClass="RestaurantDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eoU-DC-3Bm"/>
                         <viewControllerLayoutGuide type="bottom" id="O3u-rC-SCx"/>
@@ -66,8 +69,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="yHG-9C-HRD">
-                                <rect key="frame" x="0.0" y="0.0" width="397" height="183"/>
+                                <rect key="frame" x="0.0" y="62" width="412" height="256"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant's Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcp-FK-yGY">
+                                <rect key="frame" x="43" y="155" width="306" height="30"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="28"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☎️ 123456788" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-8E-cbm">
+                                <rect key="frame" x="246" y="193" width="156" height="30"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Restaurant's Address Can be Mulptiple lines. Pittsburgh, PA" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="MvE-vb-8NW">
+                                <rect key="frame" x="119" y="218" width="230" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asU-sh-FT7">
+                                <rect key="frame" x="122" y="572" width="168" height="47"/>
+                                <state key="normal" image="shareToT.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVw-kf-Kii">
+                                <rect key="frame" x="15" y="565" width="100" height="54"/>
+                                <state key="normal" title="Button" image="yelp.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Restaurant_thumbstail.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eyj-z6-1sf">
+                                <rect key="frame" x="15" y="160" width="83" height="83"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Review: As everyone has mentioned the steak sandwiches are awesome." translatesAutoresizingMaskIntoConstraints="NO" id="QnI-5k-dYp">
+                                <rect key="frame" x="21" y="326" width="331" height="74"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tag: Italian, Pizza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HA-Tm-wEv">
+                                <rect key="frame" x="26" y="408" width="326" height="32"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommend Dishes: Magaritta Pizza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucH-Zr-SNH">
+                                <rect key="frame" x="28" y="448" width="352" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="at0-SQ-Gw7">
+                                <rect key="frame" x="305" y="572" width="52" height="50"/>
+                                <state key="normal" title="Button" image="tel_icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -96,6 +154,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Restaurant_thumbstail.png" width="284" height="227"/>
         <image name="background.png" width="1227" height="773"/>
+        <image name="shareToT.png" width="250" height="68"/>
+        <image name="tel_icon.png" width="225" height="225"/>
+        <image name="yelp.png" width="620" height="350"/>
     </resources>
 </document>
