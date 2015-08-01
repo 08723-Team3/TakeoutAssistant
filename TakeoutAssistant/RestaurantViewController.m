@@ -25,7 +25,8 @@
 // Jing add
 - (void)viewDidLoad
 {
-    [HttpClient searchByPhone:@"4126220133"];
+//    [HttpClient searchByPhone:@"4126220133"];
+    self.mediaPicker.delegate = self;
     [super viewDidLoad];
     
     // Create a queue to perform recognition operations
@@ -170,6 +171,12 @@
     [self fetchRestaurantsAndUpdateUI];
 }
 
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 #pragma mark - Tesseract's recognition
 
