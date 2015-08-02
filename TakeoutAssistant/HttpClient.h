@@ -11,5 +11,5 @@
 #import "Restaurant.h"
 
 @interface HttpClient : NSObject
-+(Restaurant*) searchByPhone:(NSString*) num;
++(NSDictionary*) searchByPhone:(NSString*) num;
 @end
