@@ -234,22 +234,30 @@
         
         NSLog(@"%@", recognizedText);
         
+        NSMutableString *num = [[NSMutableString alloc]init];
+        for (NSInteger i = 0; i < [recognizedText length]; i++) {
+            char c = [recognizedText characterAtIndex:i];
+            if (c >= '0' && c <= '9') {
+                NSString *s = [NSString stringWithFormat:@"%c", c];
+                [num appendString:s];
+            }
+            if ([num length] == 10) break;
+            
+        }
+        NSDictionary *res = [HttpClient searchByPhone:num];
+        NSString *des = res.description;
+        
+        
         // Remove the animated progress activity indicator
         [self.activityIndicator stopAnimating];
         
         // Spawn an alert with the recognized text
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
-                                                        message:recognizedText
+                                                        message:des
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
-        
-        
-        
-        
-        
-        
         
     };
     
