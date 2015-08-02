@@ -2,7 +2,7 @@
 //  Restaurant.m
 //  TakeoutAssistant
 //
-//  Created by Gang Wu on 7/30/15.
+//  Created by Jike on 8/1/15.
 //  Copyright (c) 2015 Team3. All rights reserved.
 //
 
@@ -12,9 +12,17 @@
 
 @implementation Restaurant
 
-@dynamic name;
 @dynamic address;
+@dynamic name;
 @dynamic phone;
+@dynamic review;
+@dynamic attribute;
+@dynamic image;
+@dynamic rating;
+@dynamic postcode;
+@dynamic state;
+@dynamic city;
+@dynamic url;
 @dynamic menu;
 
 @end

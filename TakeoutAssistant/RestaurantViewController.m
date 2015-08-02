@@ -26,7 +26,7 @@
 // Jing add
 - (void)viewDidLoad
 {
-//    [HttpClient searchByPhone:@"4126220133"];
+    [HttpClient searchByPhone:@"4126220133"];
     self.mediaPicker.delegate = self;
     [super viewDidLoad];
     

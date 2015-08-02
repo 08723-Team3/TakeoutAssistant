@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TDOAuth.h"
+#import "YPAPISample.h"
+#import "Restaurant.h"
 
 @interface HttpClient : NSObject
-+(void) searchByPhone:(NSString*) num;
++(Restaurant*) searchByPhone:(NSString*) num;
 @end

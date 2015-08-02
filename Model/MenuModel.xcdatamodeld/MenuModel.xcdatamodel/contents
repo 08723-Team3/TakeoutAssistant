@@ -7,12 +7,20 @@
     </entity>
     <entity name="Restaurant" representedClassName="Restaurant" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postcode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="review" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="menu" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dish" inverseName="servedIn" inverseEntity="Dish" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Restaurant" positionX="1161" positionY="-52" width="128" height="103"/>
-        <element name="Dish" positionX="1456" positionY="-37" width="128" height="88"/>
+        <element name="Dish" positionX="1456" positionY="-37" width="128" height="90"/>
+        <element name="Restaurant" positionX="1161" positionY="-52" width="128" height="225"/>
     </elements>
 </model>
