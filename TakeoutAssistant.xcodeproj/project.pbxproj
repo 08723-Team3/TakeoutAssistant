@@ -311,10 +311,6 @@
 		985718B91B6A8E09001CA355 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3F10A9D51B6D46A000829333 /* RestaurantDetailViewController.h */,
-				3F10A9D61B6D46A100829333 /* RestaurantDetailViewController.m */,
-				985718F21B6AA08F001CA355 /* RestaurantViewController.h */,
-				985718F31B6AA08F001CA355 /* RestaurantViewController.m */,
 				985718BD1B6A8E09001CA355 /* AppDelegate.h */,
 				985718BE1B6A8E09001CA355 /* AppDelegate.m */,
 				985718BA1B6A8E09001CA355 /* Info.plist */,
@@ -354,6 +350,10 @@
 				985718EC1B6A919D001CA355 /* Dish.h */,
 				985718ED1B6A919D001CA355 /* Dish.m */,
 				985718DF1B6A8F7D001CA355 /* MenuModel.xcdatamodeld */,
+				3F10A9D51B6D46A000829333 /* RestaurantDetailViewController.h */,
+				3F10A9D61B6D46A100829333 /* RestaurantDetailViewController.m */,
+				985718F21B6AA08F001CA355 /* RestaurantViewController.h */,
+				985718F31B6AA08F001CA355 /* RestaurantViewController.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";

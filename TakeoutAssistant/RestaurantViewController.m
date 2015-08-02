@@ -244,6 +244,13 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
+        
+        
+        
+        
+        
+        
+        
     };
     
     // Finally, add the recognition operation to the queue
@@ -301,7 +308,7 @@
 
     } else {
         self.mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        [self presentModalViewController:self.mediaPicker animated:YES];
+        [self presentViewController:self.mediaPicker animated:YES completion:nil];
     }
 }
 
@@ -311,8 +318,7 @@
     } else if (buttonIndex == 1) {
         self.mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
-    
-    [self presentModalViewController:self.mediaPicker animated:YES];
+    [self presentViewController:self.mediaPicker animated:YES completion:nil];
 }
 
 
