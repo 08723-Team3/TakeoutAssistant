@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <TesseractOCR/TesseractOCR.h>
 
+
 @interface RestaurantViewController : UITableViewController<G8TesseractDelegate,
 UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UIActionSheetDelegate>

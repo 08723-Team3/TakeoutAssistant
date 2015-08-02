@@ -20,6 +20,10 @@
 		3F963B9C1B6C2FE500EBAAE8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B9B1B6C2FE500EBAAE8 /* libz.dylib */; };
 		3F963B9E1B6C2FEF00EBAAE8 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F963B9D1B6C2FEF00EBAAE8 /* libstdc++.6.0.9.dylib */; };
 		3F963BA01B6C322800EBAAE8 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 3F963B9F1B6C322800EBAAE8 /* tessdata */; };
+		3FA3AFC21B6E7C2F006798F1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA3AFC11B6E7C2F006798F1 /* Social.framework */; };
+		3FA3AFC41B6E7C37006798F1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA3AFC31B6E7C37006798F1 /* Accounts.framework */; };
+		3FA3AFC61B6E7C4A006798F1 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA3AFC51B6E7C4A006798F1 /* Twitter.framework */; };
+		3FA3AFC81B6E7C58006798F1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA3AFC71B6E7C58006798F1 /* MobileCoreServices.framework */; };
 		92ED02841B6D86FA00D1C5D1 /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED02591B6D86FA00D1C5D1 /* NSURLRequest+OAuth.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		92ED02851B6D86FA00D1C5D1 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED025D1B6D86FA00D1C5D1 /* NSMutableURLRequest+Parameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		92ED02861B6D86FA00D1C5D1 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED025F1B6D86FA00D1C5D1 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -80,6 +84,10 @@
 		3F963B9B1B6C2FE500EBAAE8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3F963B9D1B6C2FEF00EBAAE8 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		3F963B9F1B6C322800EBAAE8 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		3FA3AFC11B6E7C2F006798F1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		3FA3AFC31B6E7C37006798F1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		3FA3AFC51B6E7C4A006798F1 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		3FA3AFC71B6E7C58006798F1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4D5D5471631277FD50BA612E /* Pods-TakeoutAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeoutAssistant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TakeoutAssistant/Pods-TakeoutAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		92ED02581B6D86FA00D1C5D1 /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
 		92ED02591B6D86FA00D1C5D1 /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
@@ -155,6 +163,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA3AFC81B6E7C58006798F1 /* MobileCoreServices.framework in Frameworks */,
+				3FA3AFC61B6E7C4A006798F1 /* Twitter.framework in Frameworks */,
+				3FA3AFC41B6E7C37006798F1 /* Accounts.framework in Frameworks */,
+				3FA3AFC21B6E7C2F006798F1 /* Social.framework in Frameworks */,
 				3F963B9E1B6C2FEF00EBAAE8 /* libstdc++.6.0.9.dylib in Frameworks */,
 				3F963B9C1B6C2FE500EBAAE8 /* libz.dylib in Frameworks */,
 				3F963B9A1B6C2FDE00EBAAE8 /* CoreImage.framework in Frameworks */,
@@ -190,6 +202,10 @@
 		53EE4429897649FD374A72EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3FA3AFC71B6E7C58006798F1 /* MobileCoreServices.framework */,
+				3FA3AFC51B6E7C4A006798F1 /* Twitter.framework */,
+				3FA3AFC31B6E7C37006798F1 /* Accounts.framework */,
+				3FA3AFC11B6E7C2F006798F1 /* Social.framework */,
 				3F963B9D1B6C2FEF00EBAAE8 /* libstdc++.6.0.9.dylib */,
 				3F963B9B1B6C2FE500EBAAE8 /* libz.dylib */,
 				3F963B991B6C2FDE00EBAAE8 /* CoreImage.framework */,

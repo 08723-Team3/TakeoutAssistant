@@ -76,12 +76,6 @@
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☎️ 123456788" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-8E-cbm">
-                                <rect key="frame" x="246" y="193" width="156" height="30"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Restaurant's Address Can be Mulptiple lines. Pittsburgh, PA" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="MvE-vb-8NW">
                                 <rect key="frame" x="119" y="218" width="230" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -93,12 +87,18 @@
                                 <state key="normal" image="shareToT.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendTweet:" destination="bqM-qz-eEP" eventType="touchUpInside" id="cUh-z7-sPg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVw-kf-Kii">
                                 <rect key="frame" x="15" y="565" width="100" height="54"/>
                                 <state key="normal" title="Button" image="yelp.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="redirectToYelp:" destination="bqM-qz-eEP" eventType="touchUpInside" id="ObW-Qi-6oh"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Restaurant_thumbstail.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eyj-z6-1sf">
                                 <rect key="frame" x="15" y="160" width="83" height="83"/>
@@ -117,18 +117,35 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommend Dishes: Magaritta Pizza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucH-Zr-SNH">
                                 <rect key="frame" x="28" y="448" width="352" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="at0-SQ-Gw7">
-                                <rect key="frame" x="305" y="572" width="52" height="50"/>
+                                <rect key="frame" x="311" y="572" width="52" height="50"/>
                                 <state key="normal" title="Button" image="tel_icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="makeCall:" destination="bqM-qz-eEP" eventType="touchUpInside" id="43f-ab-aca"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☎️ 123456788" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-8E-cbm">
+                                <rect key="frame" x="193" y="193" width="156" height="30"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="addr_Res" destination="MvE-vb-8NW" id="TuH-CO-qEm"/>
+                        <outlet property="name_Res" destination="wcp-FK-yGY" id="MsG-Hi-JRw"/>
+                        <outlet property="restaurantImage" destination="Eyj-z6-1sf" id="kcc-wv-onu"/>
+                        <outlet property="review_Res" destination="QnI-5k-dYp" id="0re-az-Z44"/>
+                        <outlet property="tag_Res" destination="8HA-Tm-wEv" id="6St-W0-uJD"/>
+                        <outlet property="tel_Res" destination="Lpw-8E-cbm" id="VNZ-aV-B2q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zf-i9-VaN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
