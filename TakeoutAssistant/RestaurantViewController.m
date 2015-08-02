@@ -26,30 +26,11 @@
 // Jing add
 - (void)viewDidLoad
 {
-    [HttpClient searchByPhone:@"4126220133"];
     self.mediaPicker.delegate = self;
     [super viewDidLoad];
     
     // Create a queue to perform recognition operations
     self.operationQueue = [[NSOperationQueue alloc] init];
-}
-
-- (IBAction)add:(UIBarButtonItem *)sender {
-    // create a new restaurant
-    Restaurant *restaurant = [Restaurant createWithContext:self.document.managedObjectContext];
-
-    restaurant.name = [NSString stringWithFormat:@"Little Asia_%c", 65 + arc4random() % 26];
-    restaurant.address = @"abcdefg";
-    restaurant.phone = @"123456";
-    
-    // add a dish
-    Dish *dish1 = [Dish createWithContext:self.document.managedObjectContext];
-    dish1.name = @"Beef";
-    dish1.price = @"12.5";
-    [restaurant addMenuObject:dish1];
-    
-    // IMPORTANT!! update the database
-    [self synchronize];
 }
 
 #pragma mark - Properties
@@ -244,12 +225,48 @@
             if ([num length] == 10) break;
             
         }
+        NSLog(recognizedText);
+        NSLog(@"num: %@", num);
         NSDictionary *res = [HttpClient searchByPhone:num];
         NSString *des = res.description;
         
         
         // Remove the animated progress activity indicator
         [self.activityIndicator stopAnimating];
+        
+        
+        
+        // create a new restaurant
+        Restaurant *restaurant = [Restaurant createWithContext:self.document.managedObjectContext];
+        
+        restaurant.name = [res objectForKey:@"name"];
+        restaurant.phone = [res objectForKey:@"display_phone"];
+
+        restaurant.image = [res objectForKey:@"image_url"];
+        restaurant.rating = [res objectForKey:@"rating_img_url"];
+        restaurant.review = [res objectForKey:@"snippet_text"];
+        restaurant.url = [res objectForKey:@"url"];
+        
+        NSDictionary *loc = [res objectForKey:@"location"];
+        restaurant.city = [loc objectForKey:@"city"];
+        NSArray *addr = [loc objectForKey:@"address"];
+        restaurant.address = addr[0];
+        restaurant.state = [loc objectForKey:@"state_code"];
+        restaurant.postcode = [loc objectForKey:@"postal_code"];
+
+        
+        [self synchronize];
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         // Spawn an alert with the recognized text
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
