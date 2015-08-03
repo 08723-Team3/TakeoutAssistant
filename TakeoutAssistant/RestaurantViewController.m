@@ -124,7 +124,7 @@
                                                             forIndexPath:indexPath];
     Restaurant *restaurant = [self.restaurants objectAtIndex:indexPath.row];
     for(UIView * view in cell.subviews){
-        NSLog(view.description);
+
         if([view isKindOfClass:[UIImageView class]]){
             UIImageView *imageView = (UIImageView *)view;
             UIImage *thumb = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:restaurant.image]]];
