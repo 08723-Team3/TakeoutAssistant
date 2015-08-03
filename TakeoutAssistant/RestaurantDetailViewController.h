@@ -11,8 +11,10 @@
 #import <Accounts/Accounts.h>
 #import <sys/sysctl.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "Restaurant.h"
 
 @interface RestaurantDetailViewController : UIViewController
+@property (strong, nonatomic) Restaurant *restaurant;
 @property (weak, nonatomic) IBOutlet UIImageView *restaurantImage;
 @property (weak, nonatomic) IBOutlet UILabel *name_Res;
 @property (weak, nonatomic) IBOutlet UILabel *tel_Res;

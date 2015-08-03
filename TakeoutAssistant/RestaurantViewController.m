@@ -9,7 +9,6 @@
 #import "RestaurantViewController.h"
 #import <CoreData/CoreData.h>
 #import "Restaurant+Creater.h"
-#import "Dish+Creater.h"
 #import "HttpClient.h"
 #import "RestaurantDetailViewController.h"
 
@@ -121,11 +120,24 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"diyCell"
                                                             forIndexPath:indexPath];
     Restaurant *restaurant = [self.restaurants objectAtIndex:indexPath.row];
-    [cell.textLabel setText:restaurant.name];
+    
+    for(UIView * view in cell.subviews){
+        if([view isKindOfClass:[UIImageView class]]){
+            UIImageView *imageView = (UIImageView *)view;
+            // TODO: SET IMAGE HERE
+        }else if([view isKindOfClass:[UILabel class]]){
+            [(UILabel *)view setText:restaurant.name];
+        }
+    }
+    
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 68.0f;
 }
 
 #pragma mark - Notification
@@ -219,21 +231,18 @@
         for (NSInteger i = 0; i < [recognizedText length]; i++) {
             char c = [recognizedText characterAtIndex:i];
             if (c >= '0' && c <= '9') {
+                if ([num length] == 0 && c != '4') continue;
                 NSString *s = [NSString stringWithFormat:@"%c", c];
                 [num appendString:s];
             }
             if ([num length] == 10) break;
             
         }
-        NSLog(recognizedText);
         NSLog(@"num: %@", num);
         NSDictionary *res = [HttpClient searchByPhone:num];
-        NSString *des = res.description;
-        
-        
+        if (!res) return;
         // Remove the animated progress activity indicator
         [self.activityIndicator stopAnimating];
-        
         
         
         // create a new restaurant
@@ -247,6 +256,7 @@
         restaurant.review = [res objectForKey:@"snippet_text"];
         restaurant.url = [res objectForKey:@"url"];
         
+
         NSDictionary *loc = [res objectForKey:@"location"];
         restaurant.city = [loc objectForKey:@"city"];
         NSArray *addr = [loc objectForKey:@"address"];
@@ -254,28 +264,15 @@
         restaurant.state = [loc objectForKey:@"state_code"];
         restaurant.postcode = [loc objectForKey:@"postal_code"];
 
+        NSArray *cates = [res objectForKey:@"categories"];
+        NSMutableString *tags = [[NSMutableString alloc]init];
+        for (NSInteger i = 0; i < [cates count]; i++) {
+            [tags appendFormat:@"%@, ", cates[i][0]];
+        }
+        restaurant.tags = tags;
+        
         
         [self synchronize];
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // Spawn an alert with the recognized text
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
-                                                        message:des
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-        
     };
     
     // Finally, add the recognition operation to the queue
@@ -370,4 +367,29 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     RestaurantDetailViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"detailStoryId"];
     [self.navigationController pushViewController:view animated:YES];
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Restaurant *r = [self.restaurants objectAtIndex:indexPath.row ];
+    RestaurantDetailViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"detailStoryId"];
+    view.restaurant = r;
+    [self.navigationController pushViewController:view animated:YES];
+    
+    
+    
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30.0f)];
+    [view setBackgroundColor:[UIColor grayColor]];
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 150, 20)];
+    [lbl setFont:[UIFont systemFontOfSize:14]];
+    [lbl setTextColor:[UIColor whiteColor]];
+    [view addSubview:lbl];
+    
+    [lbl setText:[NSString stringWithFormat:@"%ld restaurants", [self.restaurants count]]];
+    
+    return view;
+}
+
 @end
