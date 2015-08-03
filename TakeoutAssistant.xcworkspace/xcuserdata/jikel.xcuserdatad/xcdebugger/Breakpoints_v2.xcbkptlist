@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TakeoutAssistant/RestaurantViewController.m"
-            timestampString = "460191543.458566"
+            timestampString = "460266257.246763"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "346"
-            endingLineNumber = "346"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
             landmarkName = "-actionSheet:clickedButtonAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TakeoutAssistant/RestaurantViewController.m"
+            timestampString = "460266257.246763"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

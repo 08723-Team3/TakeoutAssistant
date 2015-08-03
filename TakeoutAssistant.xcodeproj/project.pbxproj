@@ -24,6 +24,7 @@
 		3FA3AFC41B6E7C37006798F1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA3AFC31B6E7C37006798F1 /* Accounts.framework */; };
 		3FA3AFC61B6E7C4A006798F1 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA3AFC51B6E7C4A006798F1 /* Twitter.framework */; };
 		3FA3AFC81B6E7C58006798F1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA3AFC71B6E7C58006798F1 /* MobileCoreServices.framework */; };
+		92B178F01B6F151A00D4C70B /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B178EF1B6F151A00D4C70B /* Restaurant.m */; };
 		92ED02841B6D86FA00D1C5D1 /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED02591B6D86FA00D1C5D1 /* NSURLRequest+OAuth.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		92ED02851B6D86FA00D1C5D1 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED025D1B6D86FA00D1C5D1 /* NSMutableURLRequest+Parameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		92ED02861B6D86FA00D1C5D1 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED025F1B6D86FA00D1C5D1 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -43,9 +44,7 @@
 		92ED02941B6D86FA00D1C5D1 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED027D1B6D86FA00D1C5D1 /* OAToken.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		92ED02951B6D86FA00D1C5D1 /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED027F1B6D86FA00D1C5D1 /* OATokenManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		92ED02961B6D86FA00D1C5D1 /* YPAPISample.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED02831B6D86FA00D1C5D1 /* YPAPISample.m */; };
-		92ED02991B6D9B9000D1C5D1 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED02981B6D9B9000D1C5D1 /* Restaurant.m */; };
 		92EDFE8F1B6C3B6300D1C5D1 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDFE8E1B6C3B6300D1C5D1 /* HttpClient.m */; };
-		983AEA661B6AC5BB0063C498 /* Dish+Creater.m in Sources */ = {isa = PBXBuildFile; fileRef = 983AEA651B6AC5BB0063C498 /* Dish+Creater.m */; };
 		985718BC1B6A8E09001CA355 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718BB1B6A8E09001CA355 /* main.m */; };
 		985718BF1B6A8E09001CA355 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718BE1B6A8E09001CA355 /* AppDelegate.m */; };
 		985718C51B6A8E09001CA355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985718C31B6A8E09001CA355 /* Main.storyboard */; };
@@ -53,7 +52,6 @@
 		985718CA1B6A8E09001CA355 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 985718C81B6A8E09001CA355 /* LaunchScreen.xib */; };
 		985718D61B6A8E09001CA355 /* TakeoutAssistantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718D51B6A8E09001CA355 /* TakeoutAssistantTests.m */; };
 		985718E11B6A8F7D001CA355 /* MenuModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 985718DF1B6A8F7D001CA355 /* MenuModel.xcdatamodeld */; };
-		985718EE1B6A919D001CA355 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718ED1B6A919D001CA355 /* Dish.m */; };
 		985718F41B6AA08F001CA355 /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718F31B6AA08F001CA355 /* RestaurantViewController.m */; };
 		985718FD1B6AB90A001CA355 /* Restaurant+Creater.m in Sources */ = {isa = PBXBuildFile; fileRef = 985718FC1B6AB90A001CA355 /* Restaurant+Creater.m */; };
 		BA1ACFCF46656E6CC8DC5E0A /* libPods-TakeoutAssistant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A23D9E0FD6486464EB4859C /* libPods-TakeoutAssistant.a */; };
@@ -89,6 +87,8 @@
 		3FA3AFC51B6E7C4A006798F1 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		3FA3AFC71B6E7C58006798F1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4D5D5471631277FD50BA612E /* Pods-TakeoutAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeoutAssistant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TakeoutAssistant/Pods-TakeoutAssistant.debug.xcconfig"; sourceTree = "<group>"; };
+		92B178EE1B6F151A00D4C70B /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
+		92B178EF1B6F151A00D4C70B /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		92ED02581B6D86FA00D1C5D1 /* NSURLRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+OAuth.h"; sourceTree = "<group>"; };
 		92ED02591B6D86FA00D1C5D1 /* NSURLRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+OAuth.m"; sourceTree = "<group>"; };
 		92ED025C1B6D86FA00D1C5D1 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
@@ -130,12 +130,8 @@
 		92ED02811B6D86FA00D1C5D1 /* YelpAPISample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YelpAPISample-Prefix.pch"; sourceTree = "<group>"; };
 		92ED02821B6D86FA00D1C5D1 /* YPAPISample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPAPISample.h; sourceTree = "<group>"; };
 		92ED02831B6D86FA00D1C5D1 /* YPAPISample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPAPISample.m; sourceTree = "<group>"; };
-		92ED02971B6D9B9000D1C5D1 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
-		92ED02981B6D9B9000D1C5D1 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		92EDFE8D1B6C3B6300D1C5D1 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
 		92EDFE8E1B6C3B6300D1C5D1 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
-		983AEA641B6AC5BB0063C498 /* Dish+Creater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dish+Creater.h"; sourceTree = "<group>"; };
-		983AEA651B6AC5BB0063C498 /* Dish+Creater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Dish+Creater.m"; sourceTree = "<group>"; };
 		985718B61B6A8E09001CA355 /* TakeoutAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeoutAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985718BA1B6A8E09001CA355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		985718BB1B6A8E09001CA355 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -148,8 +144,6 @@
 		985718D41B6A8E09001CA355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		985718D51B6A8E09001CA355 /* TakeoutAssistantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakeoutAssistantTests.m; sourceTree = "<group>"; };
 		985718E01B6A8F7D001CA355 /* MenuModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MenuModel.xcdatamodel; sourceTree = "<group>"; };
-		985718EC1B6A919D001CA355 /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dish.h; sourceTree = "<group>"; };
-		985718ED1B6A919D001CA355 /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dish.m; sourceTree = "<group>"; };
 		985718F21B6AA08F001CA355 /* RestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantViewController.h; sourceTree = "<group>"; };
 		985718F31B6AA08F001CA355 /* RestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantViewController.m; sourceTree = "<group>"; };
 		985718FB1B6AB90A001CA355 /* Restaurant+Creater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Restaurant+Creater.h"; sourceTree = "<group>"; };
@@ -355,16 +349,12 @@
 		985718E21B6A9160001CA355 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				92B178EE1B6F151A00D4C70B /* Restaurant.h */,
+				92B178EF1B6F151A00D4C70B /* Restaurant.m */,
 				92EDFE8C1B6C3B4200D1C5D1 /* HttpClient */,
-				92ED02971B6D9B9000D1C5D1 /* Restaurant.h */,
-				92ED02981B6D9B9000D1C5D1 /* Restaurant.m */,
 				3F963B9F1B6C322800EBAAE8 /* tessdata */,
 				985718FB1B6AB90A001CA355 /* Restaurant+Creater.h */,
 				985718FC1B6AB90A001CA355 /* Restaurant+Creater.m */,
-				983AEA641B6AC5BB0063C498 /* Dish+Creater.h */,
-				983AEA651B6AC5BB0063C498 /* Dish+Creater.m */,
-				985718EC1B6A919D001CA355 /* Dish.h */,
-				985718ED1B6A919D001CA355 /* Dish.m */,
 				985718DF1B6A8F7D001CA355 /* MenuModel.xcdatamodeld */,
 				3F10A9D51B6D46A000829333 /* RestaurantDetailViewController.h */,
 				3F10A9D61B6D46A100829333 /* RestaurantDetailViewController.m */,
@@ -533,11 +523,9 @@
 				92ED02851B6D86FA00D1C5D1 /* NSMutableURLRequest+Parameters.m in Sources */,
 				985718FD1B6AB90A001CA355 /* Restaurant+Creater.m in Sources */,
 				92ED02941B6D86FA00D1C5D1 /* OAToken.m in Sources */,
-				983AEA661B6AC5BB0063C498 /* Dish+Creater.m in Sources */,
 				92ED02881B6D86FA00D1C5D1 /* Base64Transcoder.c in Sources */,
 				92EDFE8F1B6C3B6300D1C5D1 /* HttpClient.m in Sources */,
 				92ED028C1B6D86FA00D1C5D1 /* OAConsumer.m in Sources */,
-				985718EE1B6A919D001CA355 /* Dish.m in Sources */,
 				92ED02931B6D86FA00D1C5D1 /* OAServiceTicket.m in Sources */,
 				92ED028E1B6D86FA00D1C5D1 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
 				92ED02871B6D86FA00D1C5D1 /* NSURL+Base.m in Sources */,
@@ -546,7 +534,7 @@
 				92ED02951B6D86FA00D1C5D1 /* OATokenManager.m in Sources */,
 				985718BF1B6A8E09001CA355 /* AppDelegate.m in Sources */,
 				985718F41B6AA08F001CA355 /* RestaurantViewController.m in Sources */,
-				92ED02991B6D9B9000D1C5D1 /* Restaurant.m in Sources */,
+				92B178F01B6F151A00D4C70B /* Restaurant.m in Sources */,
 				92ED02841B6D86FA00D1C5D1 /* NSURLRequest+OAuth.m in Sources */,
 				92ED028A1B6D86FA00D1C5D1 /* sha1.c in Sources */,
 				92ED02901B6D86FA00D1C5D1 /* OAPlaintextSignatureProvider.m in Sources */,

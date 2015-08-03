@@ -114,12 +114,6 @@
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommend Dishes: Magaritta Pizza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucH-Zr-SNH">
-                                <rect key="frame" x="28" y="448" width="352" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="at0-SQ-Gw7">
                                 <rect key="frame" x="311" y="572" width="52" height="50"/>
                                 <state key="normal" title="Button" image="tel_icon.png">
@@ -135,16 +129,28 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcv-8W-NsR">
+                                <rect key="frame" x="55" y="496" width="199" height="42"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating on Yelp:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38p-Jl-ftD">
+                                <rect key="frame" x="96" y="455" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="addr_Res" destination="MvE-vb-8NW" id="TuH-CO-qEm"/>
+                        <outlet property="imageThumb" destination="Eyj-z6-1sf" id="9bM-9u-sCr"/>
                         <outlet property="name_Res" destination="wcp-FK-yGY" id="MsG-Hi-JRw"/>
+                        <outlet property="ratingImage" destination="zcv-8W-NsR" id="QFP-Uj-fdT"/>
                         <outlet property="restaurantImage" destination="Eyj-z6-1sf" id="kcc-wv-onu"/>
                         <outlet property="review_Res" destination="QnI-5k-dYp" id="0re-az-Z44"/>
                         <outlet property="tag_Res" destination="8HA-Tm-wEv" id="6St-W0-uJD"/>
                         <outlet property="tel_Res" destination="Lpw-8E-cbm" id="VNZ-aV-B2q"/>
+                        <outlet property="yelpUrl" destination="gVw-kf-Kii" id="pCI-5P-Ehv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zf-i9-VaN" userLabel="First Responder" sceneMemberID="firstResponder"/>

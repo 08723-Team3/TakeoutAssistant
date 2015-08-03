@@ -9,6 +9,9 @@
 #import "RestaurantDetailViewController.h"
 
 @interface RestaurantDetailViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *yelpUrl;
+@property (weak, nonatomic) IBOutlet UIImageView *imageThumb;
+@property (weak, nonatomic) IBOutlet UIImageView *ratingImage;
 @end
 
 @implementation RestaurantDetailViewController
@@ -17,14 +20,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    name_Res.text = @"Restaurant's Name";
-    tel_Res.text = [NSString stringWithFormat:@"%@%@", @"☎️ ", @"123124123"];
-    addr_Res.text = @"Restaurant's Address Can be Mulptiple lines. Pittsburgh, PA";
-    review_Res.text = @"Review: As everyone has mentioned the steak sandwiches are awesome.";
     tag_Res.text = @"Tag: Italian, Pizza";
-
-    //[[restaurantImage setImage [UIImage imageNamed:@"Restaurant_thumbstail.png"]];
-    // restaurantImage
+    
+    name_Res.text = self.restaurant.name;
+    
+    review_Res.text = self.restaurant.review;
+    
+    tag_Res.text = self.restaurant.tags;
+    
+    addr_Res.text = [NSString stringWithFormat:@"%@\n%@ %@ %@", self.restaurant.address, self.restaurant.city, self.restaurant.state, self.restaurant.postcode];
+    UIImage *rating = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.restaurant.rating]]];
+    self.ratingImage.image = rating;
+    self.ratingImage.contentMode = UIViewContentModeScaleAspectFit;
+    UIImage *thumb = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.restaurant.image]]];
+    self.imageThumb.image = thumb;
+    self.imageThumb.contentMode = UIViewContentModeScaleAspectFit;
     
 }
 
@@ -44,7 +54,7 @@
 
 
 - (IBAction)redirectToYelp:(id)sender {
-    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.restaurant.url]];
 }
 
 - (IBAction)sendTweet:(id)sender {
