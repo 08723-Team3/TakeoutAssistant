@@ -54,7 +54,12 @@
 
 
 - (IBAction)redirectToYelp:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.restaurant.url]];
+    NSLog(@"123");
+    NSURL *url = [NSURL URLWithString:self.restaurant.url];
+    
+    if (![[UIApplication sharedApplication] openURL:url]) {
+        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+    };
 }
 
 - (IBAction)sendTweet:(id)sender {
