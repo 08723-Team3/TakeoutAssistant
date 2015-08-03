@@ -120,11 +120,24 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"diyCell"
                                                             forIndexPath:indexPath];
     Restaurant *restaurant = [self.restaurants objectAtIndex:indexPath.row];
-    [cell.textLabel setText:restaurant.name];
+    
+    for(UIView * view in cell.subviews){
+        if([view isKindOfClass:[UIImageView class]]){
+            UIImageView *imageView = (UIImageView *)view;
+            // TODO: SET IMAGE HERE
+        }else if([view isKindOfClass:[UILabel class]]){
+            [(UILabel *)view setText:restaurant.name];
+        }
+    }
+    
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 68.0f;
 }
 
 #pragma mark - Notification
@@ -364,6 +377,19 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
     
     
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30.0f)];
+    [view setBackgroundColor:[UIColor grayColor]];
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 150, 20)];
+    [lbl setFont:[UIFont systemFontOfSize:14]];
+    [lbl setTextColor:[UIColor whiteColor]];
+    [view addSubview:lbl];
+    
+    [lbl setText:[NSString stringWithFormat:@"%ld restaurants", [self.restaurants count]]];
+    
+    return view;
 }
 
 @end
