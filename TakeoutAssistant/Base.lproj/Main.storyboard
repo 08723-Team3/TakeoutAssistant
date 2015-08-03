@@ -118,7 +118,7 @@
                                 <rect key="frame" x="0.0" y="62" width="412" height="256"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Restaurant's Address Can be Mulptiple lines. Pittsburgh, PA" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="MvE-vb-8NW">
-                                <rect key="frame" x="127" y="220" width="230" height="50"/>
+                                <rect key="frame" x="127" y="229" width="230" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -142,7 +142,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Restaurant_thumbstail.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eyj-z6-1sf">
-                                <rect key="frame" x="28" y="178" width="83" height="83"/>
+                                <rect key="frame" x="35" y="191" width="83" height="83"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Review: As everyone has mentioned the steak sandwiches are awesome." translatesAutoresizingMaskIntoConstraints="NO" id="QnI-5k-dYp">
                                 <rect key="frame" x="21" y="326" width="342" height="102"/>
@@ -165,7 +165,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☎️ 123456788" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-8E-cbm">
-                                <rect key="frame" x="194" y="194" width="156" height="30"/>
+                                <rect key="frame" x="194" y="200" width="156" height="30"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -180,7 +180,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant's Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcp-FK-yGY">
-                                <rect key="frame" x="49" y="121" width="306" height="30"/>
+                                <rect key="frame" x="49" y="137" width="306" height="30"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
