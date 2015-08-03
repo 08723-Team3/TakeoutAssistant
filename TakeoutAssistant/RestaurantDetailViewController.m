@@ -20,13 +20,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    tag_Res.text = @"Tag: Italian, Pizza";
-    
     name_Res.text = self.restaurant.name;
     
     review_Res.text = self.restaurant.review;
     
-    tag_Res.text = self.restaurant.tags;
+    tag_Res.text = [NSString stringWithFormat:@"Tags: %@", self.restaurant.tags];
     
     tel_Res.text = [[NSString alloc]initWithFormat:@"☎️:%@", self.restaurant.phone ];
     
@@ -69,7 +67,7 @@
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         
-        NSString *text = [NSString stringWithFormat:@"I love this restaurant!  %@",@"Restaurant's Name"];
+        NSString *text = [NSString stringWithFormat:@"I love this restaurant!  %@",self.restaurant.name];
         
         // The output of the request is placed in the log.
         // NSLog(@"HTTP Response: %i", [urlResponse statusCode]);
@@ -93,7 +91,7 @@
 }
 
 - (IBAction)makeCall:(id)sender {
-    NSString *number = [NSString stringWithFormat:@"%@",@"1234667"];
+    NSString *number = self.restaurant.phone;
     NSURL* callUrl=[NSURL URLWithString:[NSString   stringWithFormat:@"tel:%@",number]];
     //check  Call Function available only in iphone
     if([[UIApplication sharedApplication] canOpenURL:callUrl])

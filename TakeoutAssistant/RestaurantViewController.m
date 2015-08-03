@@ -265,7 +265,7 @@
         NSArray *cates = [res objectForKey:@"categories"];
         NSMutableString *tags = [[NSMutableString alloc]init];
         for (NSInteger i = 0; i < [cates count]; i++) {
-            [tags appendFormat:@"%@, ", cates[i][0]];
+            [tags appendFormat:@"%@ ", cates[i][0]];
         }
         restaurant.tags = tags;
         
