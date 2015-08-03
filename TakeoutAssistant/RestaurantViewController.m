@@ -123,16 +123,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"diyCell"
                                                             forIndexPath:indexPath];
     Restaurant *restaurant = [self.restaurants objectAtIndex:indexPath.row];
-    
-    for(UIView * view in cell.subviews){
-        if([view isKindOfClass:[UIImageView class]]){
-            UIImageView *imageView = (UIImageView *)view;
-            // TODO: SET IMAGE HERE
-        }else if([view isKindOfClass:[UILabel class]]){
-            [(UILabel *)view setText:restaurant.name];
-        }
-    }
-    
+
+    UIImageView *imageView = (UIImageView *)([tableView viewWithTag:101]);
+    UIImage *thumb = [UIImage imageWithData:
+                      [NSData dataWithContentsOfURL:[NSURL URLWithString:restaurant.image]]];
+    imageView.image = thumb;
+        
+    [(UILabel *)[tableView viewWithTag:102] setText:restaurant.name];
     return cell;
 }
 
