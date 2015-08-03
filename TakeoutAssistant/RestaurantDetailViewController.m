@@ -28,6 +28,8 @@
     
     tag_Res.text = self.restaurant.tags;
     
+    tel_Res.text = [[NSString alloc]initWithFormat:@"☎️:%@", self.restaurant.phone ];
+    
     addr_Res.text = [NSString stringWithFormat:@"%@\n%@ %@ %@", self.restaurant.address, self.restaurant.city, self.restaurant.state, self.restaurant.postcode];
     UIImage *rating = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.restaurant.rating]]];
     self.ratingImage.image = rating;
