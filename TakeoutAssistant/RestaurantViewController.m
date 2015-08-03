@@ -337,8 +337,9 @@
         self.mediaPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     } else if (buttonIndex == 1) {
         self.mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    } else {
+        [self dismissViewControllerAnimated:NO completion:nil];
     }
-    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 
