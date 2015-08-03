@@ -335,11 +335,14 @@
 - (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
         self.mediaPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:self.mediaPicker animated:YES completion:nil];
     } else if (buttonIndex == 1) {
         self.mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:self.mediaPicker animated:YES completion:nil];
     } else {
-        [self dismissViewControllerAnimated:NO completion:nil];
+       [self dismissViewControllerAnimated:NO completion:nil];
     }
+    
 }
 
 
