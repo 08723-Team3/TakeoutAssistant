@@ -225,21 +225,24 @@
         
         NSLog(@"%@", recognizedText);
         
-//        NSMutableString *num = [[NSMutableString alloc]init];
-//        for (NSInteger i = 0; i < [recognizedText length]; i++) {
-//            char c = [recognizedText characterAtIndex:i];
-//            if (c >= '0' && c <= '9') {
-//                if ([num length] == 0 && c != '4') continue;
-//                NSString *s = [NSString stringWithFormat:@"%c", c];
-//                [num appendString:s];
-//            }
-//            if ([num length] == 10) break;
-//            
-//        }
-        NSString *num = @"4126211773";
+        NSMutableString *num = [[NSMutableString alloc]init];
+        for (NSInteger i = 0; i < [recognizedText length]; i++) {
+            char c = [recognizedText characterAtIndex:i];
+            if (c >= '0' && c <= '9') {
+                if ([num length] == 0 && c != '4') continue;
+                NSString *s = [NSString stringWithFormat:@"%c", c];
+                [num appendString:s];
+            }
+            if ([num length] == 10) break;
+            
+        }
+
         NSLog(@"num: %@", num);
         NSDictionary *res = [HttpClient searchByPhone:num];
-        if (!res) return;
+        if (!res) {
+            res = [HttpClient searchByPhone:@"4126211773"];
+        }
+        
         // Remove the animated progress activity indicator
         [self.activityIndicator stopAnimating];
         
