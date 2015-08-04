@@ -365,11 +365,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     [self recognizeImageWithTesseract:image];
 }
 
-- (IBAction)temp:(id)sender {
-    RestaurantDetailViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"detailStoryId"];
-    [self.navigationController pushViewController:view animated:YES];
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Restaurant *r = [self.restaurants objectAtIndex:indexPath.row ];

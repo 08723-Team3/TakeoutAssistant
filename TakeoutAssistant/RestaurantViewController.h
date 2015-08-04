@@ -13,7 +13,6 @@
 @interface RestaurantViewController : UITableViewController<G8TesseractDelegate,
 UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UIActionSheetDelegate>
-- (IBAction)temp:(id)sender;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 - (IBAction)openCamera:(id)sender;
 @end
