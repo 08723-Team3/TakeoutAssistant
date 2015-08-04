@@ -143,7 +143,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Restaurant_thumbstail.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eyj-z6-1sf">
                                 <rect key="frame" x="35" y="191" width="83" height="83"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Review: As everyone has mentioned the steak sandwiches are awesome." translatesAutoresizingMaskIntoConstraints="NO" id="QnI-5k-dYp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Review: As everyone has mentioned the steak sandwiches are awesome." translatesAutoresizingMaskIntoConstraints="NO" id="QnI-5k-dYp">
                                 <rect key="frame" x="21" y="326" width="342" height="102"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="16"/>
